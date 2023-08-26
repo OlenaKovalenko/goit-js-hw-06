@@ -6,7 +6,7 @@ nameInput.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
 
-    const inputValue = event.currentTarget.value;
+    const inputValue = event.currentTarget.value.trim();
 
     nameOutput.textContent = inputValue ? inputValue : "Anonymous";
 
