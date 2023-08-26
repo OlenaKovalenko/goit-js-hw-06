@@ -4,8 +4,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const inputNumberEl = document.querySelector("input");
-
+const inputNumberEl = document.querySelector('input[type="number"]');
 const btnCreateEl = document.querySelector("[data-create]");
 btnCreateEl.addEventListener('click', getAmount);
 
