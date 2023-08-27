@@ -13,7 +13,6 @@ btnDestroyEl.addEventListener('click', destroyBoxes);
 
 const divBoxesEl = document.querySelector("#boxes");
 
-
 function getAmount() {
   const amount = inputNumberEl.value;
   createBoxes(amount);
@@ -24,8 +23,9 @@ function createBoxes(amount) {
 let size = 30;
 const arrayBoxes = [];
 
-  for (let i = 0; i <= amount; i += 1) {
+  if (amount) {
   
+  for (let i = 0; i < amount; i += 1) {
   const box = document.createElement("div");
 
   box.style.width = `${size}px`;
@@ -35,10 +35,10 @@ const arrayBoxes = [];
   size += 10;
   arrayBoxes.push(box);
  }
+}
 
 divBoxesEl.append(...arrayBoxes);
 }
-
 
 function destroyBoxes() {
   divBoxesEl.innerHTML = "";
