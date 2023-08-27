@@ -4,7 +4,7 @@ const text = document.querySelector('#text');
 inputSize.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
-    const inputValue = Number(event.currentTarget.value);
+    const inputValue = event.currentTarget.value;
 
     text.style.fontSize = `${inputValue}px`;
         
